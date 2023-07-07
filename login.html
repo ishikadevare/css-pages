@@ -1,0 +1,133 @@
+<html>
+<head>
+<title> Login Form </title>
+
+<script type="text/javascript">
+
+function BreakInDetected()
+{
+alert('Security Violation')
+return false
+}
+
+function InternetExplorerBrowser()
+{
+if(event.button==2)
+{
+BreakInDetected()
+return false
+}}
+document.oncontextmenu=new Function("BreakInDetected();return false")
+
+
+function vali1()
+{
+with(document.login)
+{
+if(username.value=="" || password.value=="")
+{
+alert("Please enter complete details");
+}
+else
+{
+alert("Logged In successfully")
+window.location.replace("services.html")
+}}}
+
+</script>
+
+<style>
+body{
+      padding:20;
+      margin-top:50px;
+      background-image:url(https://wallpaper-house.com/data/out/7/wallpaper2you_202150.jpg);
+      background-size:cover;
+      font-family: sans-serif; 
+}
+
+.loginbox{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 500px;
+      padding: 40px 40px;
+      box-sizing: border-box;
+      background: rgba(0,0,0,0.5);
+}
+
+
+h3{
+      margin:0;
+      padding: 0 0 20px;
+      color: #FFFFFF;  
+      text-align: center;
+}
+
+.loginbox p {
+      padding:0;
+      margin: 0;
+      font-weight: bold;
+      color: #fff;
+}
+
+.loginbox input[type="text"], .loginbox input[type="password"] {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: #fff;
+      font-size:16px;
+}
+
+.loginbox a{
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+}
+
+: :placeholder{
+      color: rgba(255,255,255,0.5);
+}
+
+.user{
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      top: calc(-110px/2);
+      left: calc(50% - 50px);
+      border-radius: 50%;
+}
+
+</style>
+
+</head>
+<body>
+<div class="loginbox">
+
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQk-COFuVx_inM-im5zPvCrssE7CYqholjxBw&usqp=CAU" class="user"></center><br>
+<form name="login" action="home.html" method="post">
+<h3><center> DISHA MOTOR TRAINING SCHOOL</center></h3>
+<h3><center> LOGIN FORM</center> </h3>
+
+<p>Username</p>
+<center><input type="text" placeholder="Username" required="required" value="" name="username" size="30" onkeyup="vali2()"></center><br>
+<br>
+<p>Password</p>
+<center><input type="password" placeholder="Password" required="required" value="" onchange="vali1()" name="password" size="30" 
+maxlength="15"><br><br><br>
+<input type="button" value="Login" onclick="vali1()" name="l1">&nbsp
+<input type="reset" value="Reset"  name="r1"><br>
+</center>
+<br>
+
+<center>
+<b>If don't have an account<b> <a href="signup.html">Signup</a>
+</div>
+</center>       
+ 
+</body>
+</html>

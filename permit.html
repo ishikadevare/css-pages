@@ -1,0 +1,221 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+<title>
+Permit form
+</title>
+<script type="text/javascript">
+function BreakInDetected()
+{
+alert('Security Violation')
+return false
+}
+
+function InternetExplorerBrowser()
+{
+if(event.button==2)
+{
+BreakInDetected()
+return false
+}}
+document.oncontextmenu=new Function("BreakInDetected();return false")
+
+function display()
+{
+with(document.form1)
+{
+if(n1.value.length==""|| a1.value.length==0|| d1.value.length==0 || n2.value.length==0 || txt1.value.length==0|| m1.value.length==0 || s1.value=="Select qualification" || n3.value.length==0 ||f1.value.length==0 ||se1.value.length==0 )
+{
+alert(" Enter complete details");
+}
+else
+{
+alert("Further details will be mailed to your Email Id");
+window.location.replace("home.html")
+}}}
+function display1()
+{
+window.location.replace("home.html")
+}
+function vali1() //validation for mobno
+{
+with(document.form1)
+{
+var i=/^[0-9]+$/;
+if(m1.value.length<10||!m1.value.match(i))
+{
+document.getElementById("mobile").innerHTML="<br>*Enter valid mobile number";
+m1.focus();
+sbtn.disabled=true;
+}
+else
+{
+document.getElementById("mobile").innerHTML="";
+sbtn.disabled=false;
+}}}
+function vali2() //validation for name
+{
+with(document.form1)
+{
+var i=/^[A-Za-z\s]+$/;
+if(!n1.value.match(i) && !n2.value.match(i))
+{
+document.getElementById("name").innerHTML="<br>*Fullname and Father's name should contain only alphabets";
+n1.focus();
+sbtn.disabled=true;
+}
+else
+{
+document.getElementById("name").innerHTML="";
+sbtn.disabled=false;
+}}}
+function vali3() //validation for licenseno
+{
+with(document.form1)
+{
+var i=/^[0-9]+$/;
+if(!n3.value.match(i))
+{
+document.getElementById("licenseno").innerHTML="<br>*Enter valid license number";
+n3.focus();
+sbtn.disabled=true;
+}
+else
+{
+document.getElementById("licenseno").innerHTML="";
+sbtn.disabled=false;
+}}}
+
+</script>
+<style>
+
+*{
+      padding:0;
+      margin:0;
+}
+body{
+      background-image: url(https://www.garbutt-elliott.co.uk/wp-content/uploads/2019/08/pexels-photo-357514.jpeg);
+      margin-top: 40px;
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+}
+.bg-image{
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+}
+.regform{
+       width: 800px;
+       background-color: rgb(0,0,0,0.6);
+       margin: auto;
+       color: white;
+       padding: 10px 0px 10px 0px;
+       text-align: center;
+       border-radius: 15px 15px 0px 0px;
+       font-family: fantasy;
+}
+.main{ 
+       background-color: rgb(0,0,0,0.5);
+       width: 800px;
+       margin: auto;
+       color: #FFFFFF;
+}
+form{
+         padding:10px;
+         text-align: left;
+}
+input[type=text]{
+         padding: 3px;
+         border-radius: 6px;
+         font-size: medium;
+}
+textarea{
+          padding: 3px;
+          border-radius: 6px;
+          font-size: medium;
+          resize: none;
+}
+input[type=date]{
+          padding: 3px;
+          border-radius: 6px;
+}
+select{
+          padding: 3px;
+          border-radius: 6px;
+}
+input[type=submit]{
+          padding: 10px;
+          border-radius: 6px;
+          font-weight: bold;
+}
+input[type=reset]{
+          padding: 10px;
+          border-radius: 6px;
+          font-weight: bold;
+}
+input[type=button]{
+          padding: 10px;
+          border-radius: 6px;
+          font-weight: bold;
+}
+.error{
+          color: red;
+          width: 800px;
+          font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="regform">
+<h2 style="font-family: 'Pattaya', sans-serif; font-size: 30px;"><b>Permit Form</b></h2><br>
+</div><br>
+
+<div class="bg-image"></div>
+<div class="main">
+<form name="form1" method="POST" action="home.html">
+<b>Full Name: </b> <input type="text" name="n1" size="35" maxlength="100" onkeyup="vali2()"> &nbsp
+
+<b>Age: </b> <input type="text" name="a1" size =3>&nbsp
+
+<b> Birth date: </b> <input type="date" name="d1"> <br><br>
+
+<b>Father's/Husband's Name: </b> <input type="text" name="n2" size="35" maxlength="100" ><div id="name" class="error"></div><br>
+
+<b>Present Address: </b><br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<textarea name="txt1" rows=5 cols= 40></textarea> <br><br>
+
+<b>Mobile No.: </b> <input type="text" name="m1" size=10 onkeyup="vali1()"><div id="mobile" class="error"></div> <br>
+
+<b>Education: </b> <select name="s1" size="1" >
+	<option value="Select qualification"> Select Qualification </option>
+   	<option value="8th passed"> 8th Passed </option>
+	<option value="10th passed"> 10th Passed </option>
+	<option value="11th passed"> 12th Passed </option>
+</select><br><br>
+
+<b>License Batch No: </b> <input type="text" name="n3" size="35" maxlength="100" onkeyup="vali3()"><div id="licenseno" class="error"></div> <br>
+
+<b>Documents you need to submit for 3 wheeler permit :-</b><br>
+<b>1) Aadharcard<br>
+2) PAN card<br>
+3) Light bill/ Passport</b><br><br>
+
+<b>Upload documents:-</b><br>
+<input type="file" name="f1">&nbsp&nbsp
+
+<b>License you already have: </b> <select name="se1" size="1" >
+	<option value="Select vehicle"> Select Vehicle </option>
+   	<option value="8th passed"> 2 Wheeler </option>
+	<option value="10th passed"> 4 wheeler </option>
+	<option value="11th passed"> Both </option>
+</select><br><br>
+<b> Auto Permit fees:- 30,000/-<br><br>
+
+
+<h2> Please Note: Permit Fees, Test Fees are Inclusive/Exclusive </h2><br>
+
+<input type="button" value=" Submit" onclick="display()" name="sbtn">&nbsp&nbsp<input type="reset" value=" Reset">&nbsp&nbsp<input type="button" value="Home" onclick="display1()">
+
+</div>
+</form>
+</body>
+</html>

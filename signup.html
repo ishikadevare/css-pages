@@ -1,0 +1,156 @@
+<html>
+<head>
+<title> Signup Form </title>
+
+<script type="text/javascript">
+function BreakInDetected()
+{
+alert('Security Violation')
+return false
+}
+
+function InternetExplorerBrowser()
+{
+if(event.button==2)
+{
+BreakInDetected()
+return false
+}}
+document.oncontextmenu=new Function("BreakInDetected();return false")
+
+function vali1()
+{
+with(document.signup)
+{
+if(p1.value!=p2.value)
+{
+alert("Password doesn't match");
+s1.disabled=true;
+}
+else
+s1.disabled=false;
+}}
+
+function vali2()
+{
+with(document.signup)
+{
+var j=emailid.value.indexOf('@')
+var k=emailid.value.indexOf('.')
+if(username.value==0 || emailid.value==0 || p1.value==0|| p2.value==0 || j==-1 || k==-1)
+{
+alert("Please enter complete details");
+}
+else
+{
+alert("Signed up successfully")
+window.location.replace("services.html")
+}}}
+
+</script>
+
+<style>
+body{
+      padding:20;
+      margin-top:50px;
+      background-image:url(https://www.wallpapertip.com/wmimgs/38-388407_yellow-sky-background.jpg);
+      background-size:cover;
+      font-family: sans-serif; 
+}
+
+.loginbox{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 550px;
+      padding: 40px 40px;
+      box-sizing: border-box;
+      background: rgba(0,0,0,0.5);
+}
+
+h3{
+      margin:0;
+      padding: 0 0 20px;
+      color: #FFFFFF;  
+      text-align: center;
+}
+
+.loginbox p {
+      padding:0;
+      margin: 0;
+      font-weight: bold;
+      color: #fff;
+}
+
+.loginbox input[type="text"], .loginbox input[type="password"] {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      color: #fff;
+      font-size:16px;
+}
+
+.loginbox a{
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+}
+
+: :placeholder{
+      color: rgba(255,255,255,0.5);
+}
+
+.user{
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: absolute;
+      top: calc(-110px/2);
+      left: calc(50% - 50px);
+      border-radius: 50%;
+}
+
+</style>
+
+</head>
+<body>
+<div class="loginbox">
+
+<center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQk-COFuVx_inM-im5zPvCrssE7CYqholjxBw&usqp=CAU" class="user"></center><br>
+<form name="signup" action="home.html" method="post">
+<h3><center> DISHA MOTOR TRAINING SCHOOL</center></h3>
+<h3><center> SIGNUP FORM</center> </h3>
+
+<p>Username</p>
+<center><input type="text" placeholder="Username" required="required" value="" onchange="" name="username" size="30"></center>
+<br>
+<p>Email Id</p>
+<center><input type="text" placeholder="Email Id" required="required" value="" onchange="" name="emailid" size="30" ></center>
+<br>
+
+<p>Set Password</p>
+<center><input type="password" placeholder="Password" required="required" value="" onchange="" name="p1" size="30" 
+maxlength="15"></center>
+<br>
+
+<p>Confirm Password</p>
+<center><input type="password" placeholder="Password" required="required" value="" onblur="vali1()" name="p2" size="30" 
+maxlength="15"></center>
+<br>
+<center>
+<input type="button" value="Signup" onclick="vali2()" name="s1">&nbsp
+<input type="button" value="Reset" onclick="" name="R1"><br>
+</center>
+<br>
+
+<center>
+<p>If already have an account <a href="login.html">Login</a></p>
+</center>
+</div>       
+ 
+</body>
+</html>

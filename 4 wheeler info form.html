@@ -1,0 +1,130 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+<title>
+4 wheeler Info form
+</title>
+<script type="text/javascript">
+function BreakInDetected()
+{
+alert('Security Violation')
+return false
+}
+
+function InternetExplorerBrowser()
+{
+if(event.button==2)
+{
+BreakInDetected()
+return false
+}}
+document.oncontextmenu=new Function("BreakInDetected();return false")
+</script>
+<style>
+body{
+         background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+         font-size: x-large;        
+}
+
+.abtn {
+          font-size: 24px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {font-size: 10px;}
+
+.button {
+	position: absolute;
+  z-index: 1;
+  display: block;
+  top: calc(50% - 2.5rem - 5px);
+  left: calc(50% - 6rem - 5px);
+	height: 5rem;
+	width: 12rem;
+  margin-top: 330px;
+	background: transparent linear-gradient(to top left, rgba(249,208,129,.2) 0%, rgba(227,2,62,.2) 40%, rgba(49,128,135,.2) 100%);
+	border: $borderWidth solid transparent;
+	border-image-source: linear-gradient(to top left, rgba(249,208,129,1) 0%, rgba(227,2,62,1) 40%, rgba(49,128,135,1) 100%);
+	border-image-slice: 1;
+  transition: transform .25s;
+  letter-spacing: .2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  
+    &::after {
+    @include buttonLayer;
+    z-index: -1;
+  	background: transparent linear-gradient(to bottom left, rgba(249,208,129,.25) 10%, rgba(227,2,62,.25) 30%, rgba(49,128,135,.25) 90%);
+    border-image-source: linear-gradient(to bottom left, rgba(249,208,129,1) 10%, rgba(227,2,62,1) 30%, rgba(49,128,135,1) 90%);
+    transition: opacity 1s;
+  }
+
+  &:active {
+    transform: scale(.96);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    @include buttonLayer;
+    z-index: 0;
+    border-image-source: linear-gradient(to bottom left, rgba(249,208,129,1) 20%, rgba(227,2,62,1) 40%, rgba(49,128,135,1) 70%);
+    transition: opacity .5s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+
+</style>
+  
+</head>
+<body>
+<center>
+<h2 style="font-family: 'Pattaya', sans-serif; font-size: 30px;"><b>4 Wheeler</b></h2>
+<form name="form1" action="4 wheeler form.html">
+<h3>Information :-</h3>
+Hello! Do you want to apply for four wheeler training?<br>
+If yes, you need to read below information carefully!<br><br><br>
+
+Training- 4 wheeler <br>
+Course- 20 days<br>
+Duration- 30 mins<br>
+Lecture- 4 Sundays<br><br>
+
+4 wheeler training course is of 20 days out of which 15 days will be given for training and 4 sundays<br> will be allocated for theory lecture in which you will given detailed knowledge about spare parts of vehicle.<br><br>
+
+Course Fees- 7800/-<br>
+<b>*If paid once 10% discount will be given!</b><br><br>
+
+Documents you need to submit for the training :-<br>
+1) Aadharcard<br>
+2) Any birthproof<br><br>
+
+<input type="submit" value="Apply" onclick="" name="abtn" class="button button1">
+</center>
+</form>
+</body>
+</html>
+
+
